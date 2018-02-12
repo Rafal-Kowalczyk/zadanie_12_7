@@ -2,7 +2,7 @@ function Column(id, name) {
 	var self = this;
 	
 	this.id = id;
-	this.name = name || 'No name given';
+	this.name = name;
 	this.element = createColumn();
 
 	function createColumn() {
@@ -20,21 +20,21 @@ function Column(id, name) {
 		
 		columnAddCard.click(function(event) {
 			var cardName = prompt("Enter the name of the card");
-			event.preventDefault();
-			$.ajax({
-			    url: baseUrl + '/card',
-			    method: 'POST',
-			    data: {
-				   name: cardName,
-				   bootcamp_kanban_column_id: self.id
-				},
-			    success: function(response) {
-			       	var card = new Card(response.id, cardName);
-			       	if (cardName) {
-			       		self.createCard(card);
-			   		}
-			    }
-			});
+			if(cardName) {
+				event.preventDefault();
+				$.ajax({
+				    url: baseUrl + '/card',
+				    method: 'POST',
+				    data: {
+					   name: cardName,
+					   bootcamp_kanban_column_id: self.id
+					},
+				    success: function(response) {
+				       	var card = new Card(response.id, cardName);
+				       	self.createCard(card);
+				   	}
+				});
+			}	
 		});
 			
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
