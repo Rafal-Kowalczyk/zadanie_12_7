@@ -91,7 +91,7 @@ $(function(){
       });
       card.append(cardDeleteBtn);
       cardDescription.text(self.description);
-      card.append(cardDescription)
+      card.append(cardDescription);
       return card;
     }
   }
@@ -99,5 +99,6 @@ $(function(){
     removeCard: function() {
       this.element.remove();
     }
-  }
-})
+  };
+});
+
