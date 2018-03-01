@@ -1,44 +1,73 @@
-body {margin: 0;}
-* {box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Krona One', sans-serif;
+  margin: 0;
+  background: url('https://images.unsplash.com/photo-1518409274682-1cb2fe2955a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b6ce2d94a6218709710dd8f604c62425&auto=format&fit=crop&w=668&q=80');
+  background-size: cover;
+  background-position: center;
+  text-transform: uppercase;
+}
 
 .ui-sortable {
   min-height: 80px;
 }
-.btn-delete {
+.btn-danger {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 22px;
-  height: 22px;
-  border: 0;
-  background-color: rgba(0,0,0,0.4);
-  color: white;
+  top: 20px;
+  right: 10px;
+  width: 20px;
+  line-height: 12px;
+  padding: 3px;
+  font-size: 12px;
+  text-transform: uppercase; }
+/* TABLICA */
+.board {
+  text-align: center;
+  width: 90%;
 }
-/* BOARD */
 .board h1 {
+  margin: 20px;
   margin-left: 8px;
+  font-size: 60px;
+  color: #119db9;
+ 
+}
+.create-column {
+  margin: 20px;
 }
 .column-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
-/* COLUMN */
+/* KOLUMNY */
 .column {
   order: 1;
   min-width: 300px;
   min-height: 50vh;
-  background-color: lightgrey;
+  border-radius: 5%;
+  background-color: #ffcc00;
   margin-left: 8px;
   list-style: none;
   position: relative;
+  padding: 5px;
+  margin: 10px;
+}
+.column-title {
+  font-size: 28px;
+  margin: 10px 50px 10px 10px;
 }
 .column-add-card {
   cursor: pointer;
-  text-decoration: underline;
-  margin: 5px 8px;
+  text-decoration: none;
+  margin: 10px 8px;
   display: block;
 }
 
@@ -47,10 +76,12 @@ body {margin: 0;}
   box-sizing: border-box;
   display: block;
   height: 60px;
-  margin-bottom: 5px;
+  margin: 5px;
   padding: 4px;
   overflow: hidden;
   position: relative;
+  background: #a5dcf7;
+  border-radius: 5%;
 }
 .card-list {
   list-style: none;
@@ -58,6 +89,7 @@ body {margin: 0;}
   padding: 0px;
 }
 .card-description {
+  text-align: left;
   margin: 2px 0;
 }
 .card-placeholder {
