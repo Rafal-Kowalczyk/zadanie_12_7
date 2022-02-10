@@ -30,7 +30,7 @@
     "glob-run": "^0.1.6",
     "jshint": "^2.9.5",
     "mkdirp": "^0.5.1",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.2",
