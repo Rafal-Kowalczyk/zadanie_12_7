@@ -27,7 +27,7 @@
   "dependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.19.0",
-    "glob-run": "^0.1.6",
+    "glob-run": "^0.1.7",
     "jshint": "^2.9.5",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.7.2",
