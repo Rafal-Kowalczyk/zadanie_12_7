@@ -26,9 +26,9 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.19.0",
+    "browser-sync": "^2.29.1",
     "glob-run": "^0.1.6",
-    "jshint": "^2.9.5",
+    "jshint": "^2.13.6",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.7.2",
     "nu-html-checker": "^0.1.0",
